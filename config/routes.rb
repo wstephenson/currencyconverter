@@ -1,4 +1,8 @@
 Jets.application.routes.draw do
+  get 'quotes', to: 'quote#index'
+  get 'quotes/show/:id', to: 'quote#show'
+  get 'quote_sets', to: 'quote_set#index'
+  get 'quote_sets/show/:id', to: 'quote_set#show'
   root "jets/public#show"
 
   # The jets/public#show controller can serve static utf8 content out of the public folder.
