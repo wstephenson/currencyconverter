@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/wstephenson/money-apilayer_currencydata-bank
+  revision: 06fb2971a845a2bfb266cdeb6251485e0603a1da
+  branch: master
+  specs:
+    money-apilayer_currencydata-bank (0.6.0)
+      json (>= 1.8)
+      monetize (~> 1.4)
+      money (~> 6.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -161,6 +171,7 @@ GEM
     jets-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
     jmespath (1.6.1)
+    json (2.6.2)
     kramdown (2.4.0)
       rexml
     launchy (2.5.0)
@@ -175,6 +186,10 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.15.0)
+    monetize (1.12.0)
+      money (~> 6.12)
+    money (6.16.0)
+      i18n (>= 0.6.4, <= 2)
     nio4r (2.5.8)
     nokogiri (1.13.6-x86_64-linux)
       racc (~> 1.4)
@@ -238,6 +253,7 @@ DEPENDENCIES
   dynomite
   jets (~> 3.1.0)
   launchy
+  money-apilayer_currencydata-bank!
   pg (~> 1.2.3)
   puma
   rack

@@ -10,6 +10,8 @@ gem "pg", "~> 1.2.3"
 gem "dynomite"
 gem "zeitwerk", "~> 2.5.0"
 
+gem 'money-apilayer_currencydata-bank', git: 'https://github.com/wstephenson/money-apilayer_currencydata-bank', branch: 'master'
+
 # development and test groups are not bundled as part of the deployment
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
