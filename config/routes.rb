@@ -1,4 +1,5 @@
 Jets.application.routes.draw do
+  post 'convert', to: 'conversion#convert'
   get 'quotes', to: 'quote#index'
   get 'quotes/show/:id', to: 'quote#show'
   get 'quote_sets', to: 'quote_set#index'
