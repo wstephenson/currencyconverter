@@ -6,7 +6,11 @@ class ConversionController < ApplicationController
 
     quote = most_recent_quoteset.quotes.find_by!(currencies: rate_code)
 
-    render json: quote.convert(BigDecimal(convert_params['amount'])).to_s('F')
+    render json: {
+      amount: quote.convert(BigDecimal(convert_params['amount'])).to_s('F'),
+      rate: quote.rate,
+      timestamp: most_recent_quoteset.timestamp
+    }
   rescue ActiveRecord::RecordNotFound
     render json:{ error: "rate for currency pair '#{rate_code}' not found", status: :unprocessable_entity}
   rescue Quote::InconvertibleAmount, ArgumentError
